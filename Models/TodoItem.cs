@@ -8,6 +8,7 @@ namespace AspNetCoreTodo.Models
         public bool IsDone { get; set; }
         [Required]
         public string Title { get; set; }
+        [DisplayFormat(DataFormatString = @"{0:dd\/MM\/yyyy}", ApplyFormatInEditMode = true)]
         public DateTimeOffset? DueAt { get; set; }
         public string UserId { get; set; }
     }

@@ -27,7 +27,7 @@ namespace AspNetCoreTodo.Services
         {
             newItem.Id=Guid.NewGuid();
             newItem.IsDone=false;
-            newItem.DueAt=DateTimeOffset.Now.AddDays(3);
+            //newItem.DueAt=DateTimeOffset.Now.AddDays(3);
             newItem.UserId=user.Id;
             _context.Add(newItem);
             var saveResult = await _context.SaveChangesAsync();
